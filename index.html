@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week B Develop Task - Computer Networks Exam Practice</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f7f9;
+        }
+
+        header {
+            border-bottom: 3px solid #007BA6;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: #007BA6;
+            margin: 0;
+            font-size: 24pt;
+        }
+
+        .subtitle {
+            color: #00796B;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .instruction {
+            color: #00796B;
+            font-weight: bold;
+        }
+
+        a {
+            color: #0056B3;
+            text-decoration: underline;
+        }
+
+        .keyword {
+            color: #C62828;
+            font-weight: bold;
+        }
+
+        /* Scaffolding and Companion Section */
+        .scaffold-box {
+            background-color: #eef7fa;
+            border-left: 5px solid #007BA6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .scaffold-box h2 {
+            color: #007BA6;
+            margin-top: 0;
+            font-size: 16pt;
+        }
+
+        /* Interactive Question Cards */
+        .question-card {
+            background: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .question-card h3 {
+            color: #007BA6;
+            margin-top: 0;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 8px;
+        }
+
+        .hint-btn {
+            background-color: #00796B;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .hint-btn:hover {
+            background-color: #005a50;
+        }
+
+        .hint-content {
+            display: none;
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-top: 10px;
+        }
+
+        .check-btn {
+            background-color: #007BA6;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .check-btn:hover {
+            background-color: #0056B3;
+        }
+
+        .mark-scheme {
+            display: none;
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .mark-scheme h4 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .mark-scheme ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+
+        /* Matching Activity */
+        .matching-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .match-select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Networking: Exam Practice &amp; Consolidation</h1>
+        <p class="subtitle">Week B: Develop Task (Est. Time: 15 mins)</p>
+    </header>
+
+    <!-- LESSON COMPANION & SCAFFOLDING (ND Friendly: Chunked, Clear) -->
+    <section class="scaffold-box">
+        <h2>Lesson Companion: Quick Memory Scaffolds</h2>
+        <p class="instruction">Use these core concepts to scaffold your answers for the exam questions below.</p>
+        <ul>
+            <li><span class="keyword">TCP/IP Model Layers</span>: <strong>Application</strong> (HTTP, FTP, SMTP), <strong>Transport</strong> (TCP, UDP), <strong>Network/Internet</strong> (IP), <strong>Data Link/Hardware</strong> (Ethernet, MAC).</li>
+            <li><span class="keyword">Star Topology</span>: All nodes connect to a central device (switch). If one cable fails, only that device disconnects.</li>
+            <li><span class="keyword">Penetration Testing</span>: Authorised simulated cyberattacks to identify and fix vulnerabilities.</li>
+            <li><span class="keyword">Protocols</span>: <span class="keyword">SMTP</span> sends email; <span class="keyword">IMAP</span>/<span class="keyword">POP3</span> receives email; <span class="keyword">HTTPS</span> securely fetches web pages.</li>
+        </ul>
+    </section>
+
+    <!-- EXAM PRACTICE CONTAINER -->
+    <main>
+
+        <!-- QUESTION 1: LOW-DEMAND MATCHING / SCAFFOLDED OPEN RESPONSE -->
+        <article class="question-card">
+            <h3>Question 1: Protocol Identification Layers (4 Marks)</h3>
+            <p class="instruction">Instruction: First, match each protocol to its correct TCP/IP layer. Then answer the short question below.</p>
+            
+            <div class="matching-container">
+                <div><strong>Protocol</strong></div>
+                <div><strong>TCP/IP Layer</strong></div>
+
+                <div>1. HTTP / HTTPS</div>
+                <div>
+                    <select class="match-select" id="match1">
+                        <option value="">-- Select Layer --</option>
+                        <option value="app">Application Layer</option>
+                        <option value="trans">Transport Layer</option>
+                        <option value="net">Network / Internet Layer</option>
+                    </select>
+                </div>
+
+                <div>2. IP (Internet Protocol)</div>
+                <div>
+                    <select class="match-select" id="match2">
+                        <option value="">-- Select Layer --</option>
+                        <option value="app">Application Layer</option>
+                        <option value="trans">Transport Layer</option>
+                        <option value="net">Network / Internet Layer</option>
+                    </select>
+                </div>
+            </div>
+
+            <p><strong>Part B:</strong> Describe the specific role of the <span class="keyword">SMTP</span> protocol when handling email communication. (2 marks)</p>
+            
+            <button class="hint-btn" onclick="toggleElement('hint1')">Need a Hint?</button>
+            <div id="hint1" class="hint-content">
+                <strong>Memory Helper:</strong> Think about the direction of the email. Is SMTP used to push the email out to a server, or pull it down to your phone?
+            </div>
+
+            <textarea id="q1-ans" placeholder="Type your answer here..."></textarea>
+            
+            <button class="check-btn" onclick="checkQ1()">Submit &amp; View Feedback</button>
+
+            <div id="ms1" class="mark-scheme">
+                <h4>Official Mark Scheme &amp; Self-Check</h4>
+                <p><strong>Matching:</strong> HTTP/HTTPS = Application Layer | IP = Network / Internet Layer</p>
+                <p><strong>Part B Marks (2 Marks Max):</strong></p>
+                <ul>
+                    <li>Used to <span class="keyword">send / transfer</span> emails (1 mark)</li>
+                    <li>From a client to a mail server OR between mail servers (1 mark)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- QUESTION 2: TOPOLOGY COMPARISON & CONSTRAINTS -->
+        <article class="question-card">
+            <h3>Question 2: Network Topologies (3 Marks)</h3>
+            <p>A school plans to install a network connecting 20 classroom computers to a central switch.</p>
+            <p><strong>Question:</strong> Explain one advantage and one disadvantage of using a <span class="keyword">star topology</span> for this school network instead of a bus topology. (3 marks)</p>
+
+            <button class="hint-btn" onclick="toggleElement('hint2')">Need a Hint?</button>
+            <div id="hint2" class="hint-content">
+                <strong>Memory Helper:</strong> Draw a mental picture. In a star, every node has its own cable to the switch. What happens if one cable snaps? What happens if you need to buy 20 separate long cables?
+            </div>
+
+            <textarea id="q2-ans" placeholder="Type your answer here..."></textarea>
+
+            <button class="check-btn" onclick="toggleElement('ms2')">Submit &amp; View Feedback</button>
+
+            <div id="ms2" class="mark-scheme">
+                <h4>Official Mark Scheme &amp; Self-Check</h4>
+                <p><strong>Advantage (2 Marks Max):</strong></p>
+                <ul>
+                    <li>If one cable/device fails, the rest of the network continues to function (1 mark)</li>
+                    <li>Because each device has its own dedicated connection to the central switch (1 mark)</li>
+                    <li><i>Alternative:</i> Easy to add new devices (1) without bringing down the network (1).</li>
+                </ul>
+                <p><strong>Disadvantage (1 Mark Max):</strong></p>
+                <ul>
+                    <li>High installation cost / requires more cabling (1 mark)</li>
+                    <li>If the central switch fails, the whole network goes down (1 mark)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- QUESTION 3: NETWORK SECURITY (DESCRIPTION/EXPLANATION) -->
+        <article class="question-card">
+            <h3>Question 3: Network Security (3 Marks)</h3>
+            <p>A business hires a security firm to conduct <span class="keyword">penetration testing</span> on its internal network.</p>
+            <p><strong>Question:</strong> Describe how penetration testing helps protect the organisation's software and network systems. (3 marks)</p>
+
+            <button class="hint-btn" onclick="toggleElement('hint3')">Need a Hint?</button>
+            <div id="hint3" class="hint-content">
+                <strong>Memory Helper:</strong> Use the sequence: Authorised Attack &rarr; Find Weakness &rarr; Fix Vulnerability.
+            </div>
+
+            <textarea id="q3-ans" placeholder="Type your answer here..."></textarea>
+
+            <button class="check-btn" onclick="toggleElement('ms3')">Submit &amp; View Feedback</button>
+
+            <div id="ms3" class="mark-scheme">
+                <h4>Official Mark Scheme &amp; Self-Check</h4>
+                <p><strong>Award up to 3 marks for a linked description:</strong></p>
+                <ul>
+                    <li>An authorised / simulated cyberattack is carried out on the network (1 mark)</li>
+                    <li>To identify system security <span class="keyword">vulnerabilities</span> / technical weaknesses (1 mark)</li>
+                    <li>So that the security flaws can be patched / fixed before malicious hackers exploit them (1 mark)</li>
+                </ul>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        // Toggle visibility of hints and mark schemes
+        function toggleElement(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
+        }
+
+        // Custom validation check for Q1 matching + text
+        function checkQ1() {
+            const m1 = document.getElementById('match1').value;
+            const m2 = document.getElementById('match2').value;
+            
+            if(m1 === "" || m2 === "") {
+                alert("Please complete the matching activity at the top of Question 1 first!");
+            } else {
+                toggleElement('ms1');
+            }
+        }
+    </script>
+</body>
+</html>
